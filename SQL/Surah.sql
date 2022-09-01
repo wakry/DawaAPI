@@ -1,3 +1,4 @@
+
 USE [QURAN]
 GO
 
@@ -13,6 +14,7 @@ CREATE TABLE [dbo].[Surah](
 	[ArabicName] [nvarchar](14) NULL,
 	[EnglishName] [nvarchar](14) NULL,
 	[Juza] INT NOT NULL,
+	[NumberOfPages] INT
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

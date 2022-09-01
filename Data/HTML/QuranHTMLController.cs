@@ -1,6 +1,5 @@
-﻿using HtmlAgilityPack;
-using QuranKareem.Data;
-using QuranKareem.Data.Models;
+﻿using DawaAPI.Models;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -44,8 +43,8 @@ namespace DawaAPI.Data.HTML
             int counter = 0;
             foreach(List<string> ss in y)
             {
-                Ayah ayah = _context.Ayah.SingleOrDefault(a => a.surahId.ToString() == ss[2] && a.idInSurah.ToString() == ss[8]);
-                ayah.text_For_Html = ss[9];
+                Ayah ayah = _context.Ayah.SingleOrDefault(a => a.SurahId.ToString() == ss[2] && a.IdInSurah.ToString() == ss[8]);
+                ayah.TextForHtml = ss[9];
                 if(ss[9].Length > counter)
                 {
                     counter = ss[9].Length;

@@ -1,3 +1,4 @@
+using DawaAPI.Data;
 using DawaAPI.Data.Xml;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,11 +9,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using QuranKareem.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft;
+using DawaAPI.Services;
 
 namespace DawaAPI
 {
@@ -41,9 +43,19 @@ namespace DawaAPI
 
             services.AddControllers();
 
+
             // Add Entity Framework context to the servieces
             services.AddDbContextPool<QuranContext>(opt =>
                                    opt.UseSqlServer(Configuration.GetConnectionString("Quran")));
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetConnectionString("Redis");
+                options.InstanceName = "DawaAPI";
+
+            });
+
+            services.AddScoped<IDbContextService, DbContextService>();
 
         }
 

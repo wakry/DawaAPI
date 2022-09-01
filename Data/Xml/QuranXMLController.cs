@@ -1,6 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QuranKareem.Data;
-using QuranKareem.Data.Models;
+﻿using DawaAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +25,10 @@ namespace DawaAPI.Data.Xml
             _context = context;
 
             longerName();
-            parser();
-            parser2();
+            insertSuwar();
+            insertAyat();
+            insertNumberOfPages();
         }
-
 
         public void longerName()
         {
@@ -59,7 +58,7 @@ namespace DawaAPI.Data.Xml
             var x = longestT.Length;
             var y = longestS.Length;
         }
-        public void parser()
+        public void insertSuwar()
         {
             Surah newSurah = new Surah();
 
@@ -91,13 +90,13 @@ namespace DawaAPI.Data.Xml
             using (var transaction = _context.Database.BeginTransaction())
             {
 
-                _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[Surah] ON");
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Surah] ON");
 
                 foreach (Surah surah in suwar)
                     _context.Surah.Add(surah);
                 _context.SaveChanges();
 
-                _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[Surah] OFF");
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Surah] OFF");
 
                 transaction.Commit();
             }
@@ -116,30 +115,47 @@ namespace DawaAPI.Data.Xml
             //}
         }
 
-        public void parser2()
+        public void insertAyat()
         {
             foreach (XElement xe in xml.Descendants("ROW"))
             {
                 _context.Ayah.Add(new Ayah
                 {
-                    id = ayahId++,
-                    idInSurah = int.Parse(xe.Element("aya_no").Value),
-                    surahId = int.Parse(xe.Element("sora").Value),
-                    pageNumber = int.Parse(xe.Element("page").Value),
-                    text = xe.Element("aya_text").Value,
-                    text_Emlaey = xe.Element("aya_text_emlaey").Value
+                    Id = ayahId++,
+                    IdInSurah = int.Parse(xe.Element("aya_no").Value),
+                    SurahId = int.Parse(xe.Element("sora").Value),
+                    PageNumber = int.Parse(xe.Element("page").Value),
+                    Text = xe.Element("aya_text").Value,
+                    TextEmlaey = xe.Element("aya_text_emlaey").Value
                 });
             }
 
             using (var transaction = _context.Database.BeginTransaction())
             {
 
-                _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[Ayah] ON");
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Ayah] ON");
                 _context.SaveChanges();
-                _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[Ayah] OFF");
+                _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Ayah] OFF");
 
                 transaction.Commit();
             }
+
+        }
+
+        private void insertNumberOfPages()
+        {
+          foreach(Surah surah in _context.Surah)
+            {
+                HashSet<int> pages = new HashSet<int>();
+               
+                foreach(Ayah ayah in surah.ayat)
+                {
+                    pages.Add(ayah.PageNumber);
+                }
+                surah.numberOfPages = pages.Count();
+            }
+
+            _context.SaveChanges();
 
         }
     }

@@ -1,0 +1,30 @@
+
+
+
+USE [QURAN]
+GO
+
+/****** Object:  Table [dbo].[Ayah]    Script Date: 9/18/2021 2:24:06 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Explanation](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[SourceId] [int] NOT NULL,
+	[Source] [nvarchar](200) NOT NULL,
+	[Explanation] [nvarchar](MAX) NOT NULL
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Explanation]  WITH CHECK ADD FOREIGN KEY([SourceId])
+REFERENCES [dbo].[Ayah] ([Id])
+GO
+
+
