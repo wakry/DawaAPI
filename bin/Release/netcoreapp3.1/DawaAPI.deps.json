@@ -39,7 +39,7 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "Newtonsoft.Json": "13.0.1",
-          "StackExchange.Redis": "2.6.48",
+          "StackExchange.Redis": "2.6.66",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -788,7 +788,7 @@
         "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
-          "StackExchange.Redis": "2.6.48"
+          "StackExchange.Redis": "2.6.66"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
@@ -1355,7 +1355,7 @@
           }
         }
       },
-      "StackExchange.Redis/2.6.48": {
+      "StackExchange.Redis/2.6.66": {
         "dependencies": {
           "Pipelines.Sockets.Unofficial": "2.2.2",
           "System.Diagnostics.PerformanceCounter": "5.0.0"
@@ -1363,7 +1363,7 @@
         "runtime": {
           "lib/netcoreapp3.1/StackExchange.Redis.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.6.48.48654"
+            "fileVersion": "2.6.66.47313"
           }
         },
         "compile": {
@@ -4614,12 +4614,12 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
-    "StackExchange.Redis/2.6.48": {
+    "StackExchange.Redis/2.6.66": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-T0rLGogyT6Zny+IMrDx1Z8r4nA3B0C7EVo5SHNjzT4ndOn9aGKe5K7KTVx0y41WaWmfSWpaX7HrPl0tfZ4zuUw==",
-      "path": "stackexchange.redis/2.6.48",
-      "hashPath": "stackexchange.redis.2.6.48.nupkg.sha512"
+      "sha512": "sha512-owEqq2PG1TFU1qUh3UH35BqlMjrR/AB2rlR26tGbUWW9LIeu99ArGg2iCgDj/aCSE+juClFJQhwg8i1pONlVDw==",
+      "path": "stackexchange.redis/2.6.66",
+      "hashPath": "stackexchange.redis.2.6.66.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
