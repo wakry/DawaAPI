@@ -41,10 +41,16 @@ namespace DawaAPI.Services
             });
         }
 
+        public void fillDataBase()
+        {
+            DB.fillDatabase();
+        }
+
         public QuranContext getDbContext()
         {
             return DB;
         }
+
 
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DawaAPI.Migrations
 {
     [DbContext(typeof(QuranContext))]
-    [Migration("20220502002059_changes-for-loop-error")]
-    partial class changesforlooperror
+    [Migration("20220913081239_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

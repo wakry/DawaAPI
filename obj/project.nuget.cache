@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jGE1wFRvC5bB+mDjBU1tzp1ptZ61Tc9BYvx8kJnh7W4AeyvmeT+DQVZK+v228+LIgrXBrJZcrzOv6MKo298s2A==",
+  "dgSpecHash": "MGEVskFcu3rrJ0jH7tcs0lvzMgarvQbzTL/iC34i09hvMIY92rNQNXh+L7juvxJt6/T9ZkumJS1wMEWMnqoFZA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\DawaAPI\\DawaAPI.csproj",
   "expectedPackageFiles": [
@@ -29,7 +29,7 @@
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.15\\microsoft.entityframeworkcore.tools.3.1.15.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.15\\microsoft.extensions.caching.memory.3.1.15.nupkg.sha512",
-    "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\6.0.4\\microsoft.extensions.caching.stackexchangeredis.6.0.4.nupkg.sha512",
+    "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\6.0.8\\microsoft.extensions.caching.stackexchangeredis.6.0.8.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.15\\microsoft.extensions.configuration.3.1.15.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.15\\microsoft.extensions.configuration.abstractions.3.1.15.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.15\\microsoft.extensions.configuration.binder.3.1.15.nupkg.sha512",
@@ -83,7 +83,7 @@
     "C:\\Users\\mohan\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\mohan\\.nuget\\packages\\stackexchange.redis\\2.5.61\\stackexchange.redis.2.5.61.nupkg.sha512",
+    "C:\\Users\\mohan\\.nuget\\packages\\stackexchange.redis\\2.6.66\\stackexchange.redis.2.6.66.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

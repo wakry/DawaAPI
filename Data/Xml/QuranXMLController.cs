@@ -107,7 +107,7 @@ namespace DawaAPI.Data.Xml
             //    _context.Ayah.Add(new Ayah
             //    {
             //        idInSurah = int.Parse(xe.Element("aya_no").Value),
-            //        surahId = int.Parse(xe.Element("sora").Value),
+            //        sur2ahId = int.Parse(xe.Element("sora").Value),
             //        text = xe.Element("aya_text").Value,
             //        text_Emlaey = xe.Element("aya_text_emlaey").Value
             //    });

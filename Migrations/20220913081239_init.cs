@@ -66,9 +66,9 @@ namespace DawaAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    AyahId = table.Column<int>(nullable: false),
                     SourceId = table.Column<int>(nullable: true),
-                    ExplanationText = table.Column<string>(nullable: true),
-                    AyahId = table.Column<int>(nullable: true)
+                    ExplanationText = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -78,7 +78,7 @@ namespace DawaAPI.Migrations
                         column: x => x.AyahId,
                         principalTable: "Ayah",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Explanation_ExplanationSource_SourceId",
                         column: x => x.SourceId,

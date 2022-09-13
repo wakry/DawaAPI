@@ -1,4 +1,5 @@
 ﻿using DawaAPI.Data.Word;
+using DawaAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -9,6 +10,14 @@ namespace DawaAPI.Controllers
     [ApiController]
     public class FuncController : Controller
     {
+
+        private IDbContextService _dbService;
+
+        public FuncController(IDbContextService dbService)
+        {
+            _dbService = dbService;
+        }
+
         // GET: FuncController
         public ActionResult Index()
         {
@@ -18,7 +27,15 @@ namespace DawaAPI.Controllers
         [HttpGet]
         public ActionResult WordReader()
         {
-            return Content("Worked!");
+            return Content("To seed database use /seed!");
+        }
+
+        [HttpGet]
+        [Route("/Func/seed")]
+        public ActionResult SeedDataBase()
+        {
+            _dbService.fillDataBase();
+            return Content("done");
         }
 
         // GET: FuncController/Details/5

@@ -16,8 +16,8 @@ CREATE TABLE [dbo].[Ayah](
 	[IdInSurah] [int] NOT NULL,
 	[PageNumber] [int] NOT NULL,
 	[Text] [nvarchar](1192) NULL,
-	[Text_Emlaey] [nvarchar](678) null,
-	[Text_For_Html] [nvarchar](1188) null,
+	[TextEmlaey] [nvarchar](678) null,
+	[TextForHtml] [nvarchar](1188) null,
 	[SurahId] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (

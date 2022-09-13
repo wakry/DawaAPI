@@ -143,7 +143,6 @@ C:\Projects\DawaAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Sy
 C:\Projects\DawaAPI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Projects\DawaAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Projects\DawaAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Projects\DawaAPI\bin\Release\netcoreapp3.1\OFFICE.DLL
 C:\Projects\DawaAPI\obj\Release\netcoreapp3.1\DawaAPI.csproj.AssemblyReference.cache
 C:\Projects\DawaAPI\obj\Release\netcoreapp3.1\DawaAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\DawaAPI\obj\Release\netcoreapp3.1\DawaAPI.AssemblyInfoInputs.cache

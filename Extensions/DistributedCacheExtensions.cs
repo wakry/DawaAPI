@@ -17,7 +17,7 @@ namespace DawaAPI.Extensions
 
         public static async Task<T> GetRecordAsync<T>(this IDistributedCache cache, string recordId)
         {
-            var jsonData = await cache.GetStringAsync(recordId);
+            var jsonData = await cache.GetAsync(recordId);
 
             if(jsonData == null) {  return default(T); }
 

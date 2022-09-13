@@ -41,8 +41,8 @@ namespace DawaAPI.Data.Word
                 if (muyaseer == null)
                 {
 
-                    _db.ExplanationSource.Add(new ExplanationSource() { Id = 0, ArabicName = "التفسير الميسر", EnglishName = "moyeserTfseer" });
-                    //_db.SaveChanges();
+                    _db.ExplanationSource.Add(new ExplanationSource() {ArabicName = "التفسير الميسر", EnglishName = "moyeserTfseer" });
+                    _db.SaveChanges();
 
                 }
 
